@@ -1,0 +1,16 @@
+﻿@model Vielo.Models.Customer
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Membership Type: @Model.Name</h2>
+<ul>
+    <li>Membership: @Model.MembershipType.Name</li>
+    @if (Model.Birthdate.HasValue)
+    {
+        <li>Birthdate: @Model.Birthdate</li>
+    }
+
+</ul>
+
